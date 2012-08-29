@@ -51,7 +51,7 @@ class SitesUpdater:
 
   def now(self):
     """ returns a string of current date time """
-    os.environ['TZ'] = 'Asia/Calcutta' # setting TZ to IST
+    os.environ['TZ'] = conf.timezone
     time.tzset()
     return time.strftime("%B %d %Y %H:%M:%S IST", time.localtime())
 
